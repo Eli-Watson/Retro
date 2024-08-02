@@ -1,0 +1,28 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const rssUrl = 'https://eli-watson.github.io/articles/index.xml'; // Replace with your RSS feed URL
+    const rssList = document.getElementById('rss-list');
+
+    fetch(rssUrl)
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(data, 'text/xml');
+            const items = xml.querySelectorAll('item');
+
+            items.forEach((item) => {
+                const title = item.querySelector('title').textContent;
+                const description = item.querySelector('description').textContent;
+                const link = item.querySelector('link').textContent;
+                const pubDate = item.querySelector('pubDate').textContent;
+
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${new Date(pubDate).toLocaleDateString()}</strong> - ${title}`;
+                listItem.addEventListener('click', () => {
+                    window.location.href = `/Retro/Articles.html?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&link=${encodeURIComponent(link)}`;
+                });
+
+                rssList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error fetching RSS feed:', error));
+});
