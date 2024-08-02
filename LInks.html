@@ -7,16 +7,17 @@
     <meta name="description" content="">
     <meta name="keywords" content=" ">
     <meta name="author" content="Eli Watson">
-    <title>Links</title>
     <script src="/Retro/JS/Nav.js"></script>
+    <title>Links</title>
 </head>
+<body>
 <header>
     <h1>Links!</h1>
     <P>Welcome!</P>
-    <div id="Nav"></div>
 </header>
-<body>
-    <P>Hello There! This page look much diffrent than many of my other pages as I want this one to look like more 
+<div id="Nav"></div>
+<section>
+        <P>Hello There! This page look much diffrent than many of my other pages as I want this one to look like more 
         of the classic web. Its simplicity is on purpose as I wanted to try and replicate many of The websites of the Classic web, 
     A time I never got to experince. Today there is an increassingly number of pepole who rarly stray from a handful of websites. And when I do look up something it's 
     ussally some ad ridden pice of mess that helps nobody. so ... What do we do? Well Even if we can't Find them many of these old websites are still up, Most are plan unsecured http 
@@ -32,13 +33,77 @@
     </ul>
     
 </div>
+</section>
 </body>
 </html>
 <style>
+body {
+    background-color: #000; /* Black background */
+    font-family: 'Courier New', Courier, monospace; /* Retro font */
+    color: #fff; /* White text */
+}
+
 header {
+    background-color: #ff0000; /* Red header */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #fff; /* White border */
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #000;
+}
+
+section {
+    padding: 20px;
+    background-color: #333; /* Dark grey background */
+    border: 2px solid #ff0000; /* Red border */
+    margin: 20px;
+    color: white;
+}
+
+h1 {
+    color: #ff0000; /* Red text */
+    font-size: 1.5em;
+    border-bottom: 2px dashed #ff0000; /* Red dashed border */
+    padding-bottom: 5px;
+}
+
+button {
+    background-color: #000;
+    color: #ff0000; /* Red text */
+    border: 2px solid #ff0000; /* Red border */
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.sidenav {
     text-align: center;
 }
-body {
-    background-image: url('/Home/images/Marble.jpg');
+
+
+footer {
+    background-color: #ff0000; /* Red background */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #fff; /* White border */
+    width: 100%;
+    bottom: 0;
 }
+footer a , footer a:visited{
+        color: #000;
+    }
+a {
+    color: red; 
+}
+
+a:visited {
+    color: red; 
+}
+
 </style>
