@@ -164,5 +164,30 @@ a:visited {
     color: red; 
 }
 
+@media screen and (max-width: 768px) {
+   .games-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .games-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .game-box {
+        padding: 10px;
+    }
+
+    .game-box label {
+        font-size: 1em;
+    }
+
+    .game-box button {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+}
+
 </style>
 </html>
